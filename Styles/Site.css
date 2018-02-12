@@ -1,0 +1,1476 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'optimusprincepssemiboldRg';
+    src: url('optimusprincepssemibold-webfont.eot');
+    src: url('optimusprincepssemibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('optimusprincepssemibold-webfont.woff') format('woff'),
+         url('optimusprincepssemibold-webfont.ttf') format('truetype'),
+         url('optimusprincepssemibold-webfont.svg#optimusprincepssemiboldRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.eventDate 
+{
+    padding:5px;   
+}
+html 
+{
+    overflow-x:hidden;  
+}
+#MainContent_urlAnchor 
+{
+    font-size:1em !important;   
+}
+
+body   
+{
+    background: -webkit-linear-gradient(#2d44ce, #030B3A) ; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#2d44ce, #030B3A); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#2d44ce, #030B3A); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ececec, #ececec); /* Standard syntax */
+    font-size: .80em;
+    font-family: Calibri, "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+}
+
+body.login
+{
+    background-image: url("../Images/adminbg.png");
+    background-size: cover;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+a
+{
+    text-decoration:none;
+}
+
+/* CMS Layout   
+----------------------------------------------------------*/
+
+.CMS_body
+{
+    background-color:White;
+
+}
+
+.CMS_page
+{
+     width: 100%;
+}
+
+.CMS_title
+{
+    float:left;
+    margin-left: 20px;
+    width:95%;
+}
+
+
+.CMS_leftmain
+{
+    padding-top:5px;
+    width: 250px;
+    min-height: 650px;
+    background-color: #E8E8E8;
+    float: left;
+}
+
+.CMS_main
+{
+    padding-top:5px;
+    padding-left: 160px;
+    min-height: 650px;
+    background-color: #E8E8E8; 
+
+}
+
+.CMS_userList
+{
+    width:200px;
+    float:left;
+    height:auto;
+}
+
+.CMS_userDetail
+{
+    padding-left: 350px;
+    padding-top:50px;
+}
+
+.eventEditDiv
+{
+    width: 450px;
+    position:relative;
+    left: 100px;
+    top: 80px;
+}
+
+.CMS_header
+{
+    background-image: url("../Images/adminbg.png");
+    background-size: contain;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    color: White;
+
+}
+
+.CMS_SecurityTB
+{
+    width:300px;
+}
+.CMS_SecurityTBnew
+{
+    width:275px;
+}
+
+.CMS_SecurityTB_Mulit
+{
+    width: 300px;
+    height: 40px;
+}
+
+.permissionsParent
+{
+    font-weight:bold;
+    color:Black;
+}
+.permissionsChild
+{
+     color:Black;
+}
+		
+.permissionsParentCell
+{
+    background-color:#c0c0c0;
+}
+.permissionsChildCell
+{
+    background-color:#dadada;
+}
+.permTable
+{
+    width:100%;
+}
+.permTable td
+{
+    border: solid thin black;
+}
+.CMS_headerLabel
+{
+    color:White;
+}
+
+.CMS_preview
+{
+    width: 1000px;
+    height: 1000px;
+    border: none;
+    overflow:hidden;
+    zoom: 0.5;
+    -moz-transform: scale(0.5);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.5);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+}
+.ui-datepicker a 
+{
+    font-size:1em !important;   
+}
+
+.CMS_dashDiv
+{
+    width: 600px;
+    overflow: hidden;
+    float: left;
+}
+.CMS_statsDiv
+{
+     width: 330px;
+         position:relative;
+    left:-300px;
+
+}
+.CMS_dashHeader
+{
+    font-size: 1.5em;
+    color: black;
+
+}
+
+.CMS_dash_userDiv
+{
+    width: 247px;
+    height: 35px;
+    background-color: #D7D7D7;
+    padding: 4px 0px 0px 3px;
+    border: solid 2px #C1C1C1;
+}
+
+
+.CMS_dash_pageDiv
+{
+    width: 250px;
+    height: 138px;
+    background-color: #C5D5E9;
+    padding: 10px 0px 0px 3px;
+    border: solid 2px #95B3D7
+}
+
+.CMS_pageOffline
+{
+    color: red;
+}
+
+.CMS_pageApproval
+{
+    color: blue;
+}
+
+.nonMenuPages
+{
+    padding-left:10px;
+}
+
+.newEventDiv
+{
+    background-color: White;
+    border: solid 2px purple;
+    top: 90px;
+    width: 500px;
+    left: -250px;
+    position: absolute;
+    margin-left: 50%;
+    z-index: 10;
+    height: 200px;
+    display: none;
+    padding-left:10px;
+    padding-top:15px;
+}
+
+.newPageDiv
+{
+    background-color: White;
+    border: solid 2px purple;
+    top: 90px;
+    width: 400px;
+    left: -200px;
+    position: absolute;
+    margin-left: 50%;
+    z-index: 1002;
+    display: none;
+    padding-left:10px;
+    padding-top:15px;
+}
+#pswd_info {
+    display:none;
+}
+#no_match {
+    display:none;
+}
+.invalid {
+    background:url(../images/cancel.png) no-repeat 0 50%;
+    padding-left:22px;
+    line-height:24px;
+    color:#ec3f41;
+    list-style-type: none;
+}
+.valid {
+    background:url(../images/tick.png) no-repeat 0 50%;
+    padding-left:22px;
+    line-height:24px;
+    color:#3a7d34;
+    list-style-type:none;
+}
+
+.fadedDiv
+{
+    width:100%;
+    height:100%;
+    position: fixed;
+    display: none;
+    left: 0px;
+    top: 0px;
+    background-color: black;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    z-index: 1001;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+.photoDiv
+{
+    position:relative;
+    left:0px;
+    bottom:0px;
+    border-top: solid 2px #fb4a38;
+    border-bottom: solid 2px #fb4a38;
+    background-color: #fb4a38;
+    width:960px;
+    height:100px;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.logo
+{
+   position: absolute;
+   left:0px;
+   top:5px;
+}
+ 
+/*.headerTitle
+{
+     position:absolute;
+     left: 170px;
+     top: -7px;
+     width:570px;
+
+     text-shadow: 5px 5px 5px #c78e1c;
+}*/
+ 
+.headerAddress
+{
+    position:absolute;
+    right: 5px;
+    top: 23px;
+    text-align:right;
+}
+
+#emailimg
+{
+    height:15px;
+    bottom:2px;
+    position:absolute;
+    left:-29px;
+}
+
+.siteNameText
+{
+    color:white;
+    letter-spacing:1.8px;
+    font-family: Trebuchet MS;
+    font-size: 33px;
+    font-weight:bolder;
+    text-shadow: 2px 2px #CCCCCC;
+
+}
+
+.siteNameText_Line2
+{
+    color:white;
+    font-family: Trebuchet MS;
+    font-size: 30px;
+    font-weight:bolder;
+    text-shadow: 2px 2px #CCCCCC;
+}
+
+#phoneimg
+{
+    left:10px;
+    padding-right:5px;
+}
+
+/*.addressText
+{
+    position: relative;
+    top: 0px;
+    color: #fff;
+    font-family: arial;
+    font-size: 12pt;
+    margin-top: 5px;
+     float: right; 
+    text-align: right;
+    line-height: 23px;
+}*/
+
+.addressText2
+{
+    position:relative;
+    top:0px;
+    color:white;
+    font-family: Calibri;
+    font-size:12pt;
+    margin-top:5px;
+    font-weight:bold;
+}
+
+
+
+h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+}
+
+h1
+{
+    font-size: 50px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+
+
+.page
+{
+    height: auto;
+    min-width: 1350px;
+    background-color:#ffff66;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -o-transition: 0.1s;
+}
+.header
+{
+    position: absolute;
+    background: #9dcdec;
+    width: 100%;
+    /*border-bottom: solid 3px #fb4a38;*/
+    height:223px;
+    padding-top:42px;
+    top:0px;
+    z-index:500;
+
+    
+}
+
+.header2
+{
+    width:990px;
+    background-color:#ececec;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+}
+    
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    color: #ffffff;
+    border: none;
+    font-size: 35px;
+}
+
+.newsnav
+{
+    width:100%;
+    height:40px;
+    background-color:#D80000;
+    color:#fff;
+    position:fixed;
+    top:0px;
+    z-index:1000;
+}
+
+
+     
+#latestnews
+{
+    margin:0 auto;
+    width:990px;
+    height:22px;
+    padding-top:7px;
+}
+
+
+
+
+.homeimg
+{
+    border-left:2px solid #cacaca;
+    border-right:20px solid #cacaca;
+    border-bottom:2px solid #cacaca;
+    margin:0 auto;
+    height:370px;
+    width:1200px;
+    top:-24px;
+    position:relative;
+}
+
+
+.container
+{
+
+    width:990px;
+    min-height:300px;
+    position:relative;
+    top:44px;
+    background: #FFF;
+    margin:0 auto;
+    overflow:auto;
+    padding-bottom:42px;
+}
+
+
+
+
+
+#sitemap
+{
+    height:40px;
+    background-color:#D80000;
+    padding-top:10px;
+    padding-left:14px;
+    color:#fff;
+    font-weight:600;
+    position:relative;
+    top:188px;
+    z-index:100;
+}
+
+#sitemap a:visited
+{
+    color:#fff;
+}
+
+#sitemap a
+{
+    color:#fff;
+}
+
+#sitemap a:hover
+{
+    color:#320000;
+    background-color:#fff;
+    
+}
+
+#tagline
+{
+font-size: 28px;
+font-style: italic;
+font-family: 'mf_really_awesomeregular';
+text-align: center;
+padding-top: 10px;
+padding-bottom: 20px;
+border-bottom: 5px solid #2EA3CE;
+width: 400px;
+color: #000;
+height: 131px;
+margin: 0 auto;
+position: relative;
+top: 212px;
+left: -125px;
+margin-bottom: -100px;
+background-color: rgba(255, 255, 255, 0.51);
+}
+
+.contactmap
+{
+    position:relative;
+    left:3px;
+}
+#tagline2
+{
+    font-size:25px;
+    font-style:italic;
+    font-weight:bold;
+    color:White;
+    text-align:center;
+    padding-top:25px;
+    padding-bottom:20px;
+    border-bottom:5px solid #4B92C0;
+    width:600px;
+    margin:0 auto;
+    position:relative;
+    top:352px;
+    z-index:1;
+    background-color: rgba(75, 146, 192, 0.33);
+
+}
+
+
+.container2 {
+  display: table;
+  
+}
+.column {
+  display: table-cell; /* Make all these the same height*/
+  width: 326px;
+  color:#fff;
+  padding-top:10px;
+  padding-left:10px;
+  padding-right:10px;
+  font-size:medium;
+  
+    
+  /* Just to make the cell sizes easier to spot */
+  border: 1px #fff;
+}
+
+.columnspace
+{
+    width:10px;
+}
+
+
+
+
+
+.main_left, .mainright, .main
+{
+    min-height:600px;
+    height:auto;
+}
+
+
+.main_left
+{
+
+    left:0px;
+    display:inline-block;
+    float:left;   
+    background-color:s;
+    padding-left:10px;
+    padding-bottom:10px;
+    -webkit-box-shadow: inset 10px 10px 47px -21px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 10px 10px 47px -21px rgba(0,0,0,0.75);
+box-shadow: inset 10px 10px 47px -21px rgba(0,0,0,0.75);
+    
+    
+}
+
+.mainright
+{
+
+    color:White;
+    display:inline-block;
+    margin: 0px auto;    
+    left:664px;
+    float:right;   
+    font-size:16px;
+    background-color:#437ad7;
+    position:absolute;
+    top:0px;
+    padding-top:17px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:10px;
+    -webkit-box-shadow: inset 10px 10px 47px -21px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 10px 10px 47px -21px rgba(0,0,0,0.75);
+box-shadow: inset 10px 10px 47px -21px rgba(0,0,0,0.75);
+}
+
+.main
+{
+    
+    width: 320px;
+    color:White;
+    margin: 0px auto;
+    display:inline-block;
+    padding: 0px 5px 0px 5px;
+    float:center;
+    text-align:left;
+    padding-top:17px;
+    font-size:16px;
+    padding-bottom:0px;
+    background-color:#3ca650;
+    padding-left:14px;
+    left:10px
+    -webkit-box-shadow: inset 10px 10px 47px -21px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 10px 10px 47px -21px rgba(0,0,0,0.75);
+box-shadow: inset 10px 10px 47px -21px rgba(0,0,0,0.75);
+}
+
+.mainpng
+{
+
+    width:78px;
+    height:71px;
+    position:absolute;
+    right:342px;
+    top:4px;
+}
+
+.containerspace
+    {
+        float:left;
+        width:10px;
+        height:500px;
+    }
+
+.main_bottom
+{
+    width:980px;
+    margin: 0px auto;
+    min-height:300px;
+    float:left;
+    }
+    
+.imagefade
+{
+    width:100%;
+    top:-44px;
+    height:418px;
+    position:relative;
+    margin-top:227px;
+    background-image:url('mainbg.gif');
+    background-repeat:no-repeat;
+    background-position:top;
+}
+
+.backgroundimg
+{
+    width:100%;
+    position:relative;
+    top:195px;
+    height:400px;
+    background-image:url('mainbg.gif');
+    background-repeat:no-repeat;
+    background-position:top;
+}
+    
+
+
+#slideshow > div { 
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    right: 0px; 
+    bottom: 0px; 
+}
+
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+#fullmap
+{
+    height:200px;
+    width:100%;
+    padding-top:20px;
+    padding-bottom:20;
+}
+
+.map-frame {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.pagefooter
+{
+    height:200px;
+    width:100%;
+    background-color: #9dcdec;
+    padding: 8px 0px 0px 0px;
+    line-height: normal;
+    padding-top:1px;
+    position:relative;
+    top:-5px;
+}
+
+#spacer 
+{ 
+    height:10px;
+}
+.footertopborder
+{
+    position:relative;
+    top:9px;
+    height:20px;
+    width:100%;
+    background-image:url("images/2014footerbg.png");
+    background-color:#9dcdec;
+}
+
+.footerbottom
+{
+    position: relative;
+    background-color: #9dcdec;
+    top: -29px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100px;
+    margin: 0 auto;
+    z-index: 2;
+    color: #fff;
+}
+
+#bctecad
+{
+    position: relative;
+    background-color: #9dcdec;
+    top: -39px;
+    height: 23px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 990px;
+    margin: 0px auto;
+    /* float: right; */
+    z-index: 2;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+.bctecblue 
+{
+    color:#4EB8DF;
+    transition:1s;
+}
+
+.bctecblue:hover
+{
+    color:#fff;
+}
+
+.footertop
+{
+    width:990px;
+    margin:0 auto;
+    height:199px;
+    position:relative;
+    background-image:url('images/footerbg.gif');
+    background-position:center;
+    background-color:#9DCDEC;
+    z-index:1;
+}
+
+#img2
+{
+    bottom:0;
+    right:0;
+}
+
+#p3
+    {
+    font-size:20px;
+    color:#fff;
+    font-weight:bold;
+    margin-bottom:45px;
+    line-height:1px;
+    
+    }
+
+#footerp, .p
+{
+    font-size:20px;
+    color:#fff;
+    font-weight:bold;
+    margin-bottom:-5px;
+    line-height:1px;
+    
+    }
+    
+    #footerp2, .p
+{
+    font-size:15px;
+    color:#fff;
+    font-weight:bold;
+    line-height:3px;
+
+    text-align:right;
+
+    }
+    
+    
+
+.footerleft
+{
+    width:295px;
+    margin:-7px auto;
+    color:#fff;
+    clear:both;
+    float:left;
+    top:-40px;
+
+    
+}
+
+.footermiddle
+{
+    width:430px;
+    left:77px;
+	position:relative;
+	height:180px;
+    margin:0 auto;
+    color:000;
+    float:left;
+}
+
+#textbox0
+{
+    background-color: Gray;
+    color: white;
+    font-weight: 800;
+    width: 232px;
+    height: 35px;
+    padding-left: 10px;
+    border-color: #9B9B9B
+}
+
+#TextBox1
+{
+    background-color: Gray;
+    color: white;
+    font-weight: 800;
+    width: 232px;
+    height: 35px;
+    padding-left: 10px;
+    border-color: #9B9B9B
+}
+#TextBox2
+{
+    background-color: Gray;
+    color: white;
+    font-weight: 800;
+    width: 232px;
+    height: 59px;
+    padding-left: 10px;
+    border-color: #9B9B9B
+}
+
+#Button1
+{
+    background-color: Gray;
+    color: white;
+    font-weight: 800;
+    width: 232px;
+    height: 35px;
+    padding-left: 10px;
+    border-color: #9B9B9B
+}
+
+.footeright
+{
+    
+    margin:0 auto;
+    color:000;
+    position:relative;
+    float:right;
+    width 295px;
+    position:relative;
+    font-family:
+
+
+}
+
+.leftTree
+{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100%;
+    z-index:10;
+}
+
+.rightTree
+{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width:100%;
+    height:100%;
+    z-index:10;
+}
+
+.breaker1
+{
+    padding-top:10px;
+    z-index:-3;
+}
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color:#3a4f63;
+    width:100%;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+    position:relative;
+    width: 100%;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+	display:table;
+	z-index: 1000;
+}
+
+div.menu ul li {
+	display:table-cell;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #dde4ec;
+    border: 1px #4e667d solid;
+    border-radius: 20px;  
+    color: #465c71;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 125px;
+    text-align:center;
+    margin: 0 2.5px;
+    font-size: 17px;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #465c71;
+    color: #dde4ec;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #fff !important;
+    color: #79287A !important;
+    text-decoration: underline;
+}
+
+.level2 .dynamic
+{
+    float:left;
+}
+
+.logoutBtn:hover 
+{
+   color: Yellow !important;
+   text-decoration: underline;    
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+.loginBox
+{
+    position: absolute;
+    margin-left: 50%;
+    left: -200px;
+    width: 400px;
+
+    padding-top:70px;
+    border-radius:25px;
+    border: 2px solid white;
+    top: 150px;
+    background-color: White
+}
+.pageEditDiv
+{
+    position:relative;
+    width:500px;
+    left:-250px;
+    margin-left:50%;
+
+}
+.clear
+{
+    clear: both;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+.HiddenColumn
+{
+    display:none;
+}
+.button
+{
+    background-color: White;
+    border:solid thin black;
+    color: Black;
+    padding: 10px 10px 10px 10px;
+}
+.button:hover
+{
+    background-color: #79287A;
+    color: White;
+    cursor: pointer;
+}
+ 
+.homepage_box
+{
+    width: 295px;
+    height: 65px;
+    background-color: #981F39;
+    border:solid 2px #802739;
+    text-decoration:none;
+    color: #fff;
+    font-size:large;
+    /*margin: 0px auto;*/
+}
+.homepage_box:hover
+{
+    cursor:pointer;
+}
+.boxTextCenter
+{
+     line-height:60px;    
+}
+
+
+#MainContent_eventsHeaderLabel
+{
+    text-align:left;
+    font-size:xx-large;
+    width:100%;
+    text-decoration:none;
+    padding: 0 35px 0 0;
+}
+
+#MainContent_contentDiv
+table, td
+{
+    vertical-align:top;
+    border-spacing:20px;
+}
+
+.sportstable
+{
+    border: 1px solid #9dcdec;
+}
+
+.sportstable a:link
+{
+   background-color: rgb(157, 205, 236);
+width: 68px !important;
+height: 0px !important;
+-webkit-border-radius: 5px;
+text-align: center;
+}
+
+.curriculumtable
+{
+    border: 1px solid #9dcdec;
+}
+
+.curriculumtable td
+{
+    border: 1px solid #9dcdec;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.curriculumtable tr:nth-child(even)
+{
+    background: #9dcdec;
+}
+
+.sportstable td
+{
+    border:1px solid #9dcdec;
+    text-align:center;
+    vertical-align:middle;
+}
+
+
+
+.geninfo a:link
+{
+    font-weight: 900;
+color: #fff;
+background-color: rgb(157, 205, 236);
+width: 160px;
+height: 50px;
+display: inline-block;
+-webkit-border-radius: 5px;
+padding-left: 7px;
+padding-top: 2px;
+padding-bottom:5px;
+text-align: center;
+}
+
+.geninfo td
+{
+    height:50;
+}
+
+
+#MainContent_contentDiv a:visited
+{
+    font-weight: 900;
+}
+
+#classestable a:hover
+{
+    font-weight: 900;
+    background-color:#fff;
+    color:#fff;
+}
+
+.classestable a:link
+
+{
+    color:#fff !important;
+}
+
+
+
+    
+.classestable
+{
+    padding-left:15px;
+    text-align:center;
+    align-content:center;
+}
+
+.homepage_boxEvents
+{
+    width: 315px;
+    height: auto;
+
+    /*margin: 0px auto;*/
+    padding-top:0px;
+    text-decoration:none;
+    color: white;
+}
+.homepage_boxEvents:hover
+{
+    cursor:pointer;
+}
+
+#calendar {
+		width: 700px;
+		margin: 15px auto;
+	}
+
+/*------------Menu---------*/
+
+}
+/*-----------------------------------------------*/
+
+.readmoreBR
+{
+    position:absolute;
+    bottom:-56px;
+    right:0px;
+}
+
+.readmoreBL
+{
+    margin-left:0px;
+}
+
+.pfoot
+{
+    font-size:16px;
+}
+
+.dirBox 
+{
+    display:inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+}
+
+.fileBox 
+{
+    float:left;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border:2px solid black;
+    width:150px;
+    height: auto;
+    padding: 10px;
+    word-wrap:break-word;
+    border-radius: 10px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 40px 45px;
+    background-position: top right;
+}
+
+.filename 
+{
+    position:relative;
+    height:75px;
+    width: 90px;
+}
+
+.filename span 
+{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.fileBtns 
+{
+    position:relative;
+    width:100%;
+}
+
+.fileImgs 
+{
+    width:24px;
+    height:24px;
+    display:inline-block;
+}
+
+input[type="checkbox" i] 
+{
+    margin:0 !important;
+}
+
+.selectionDiv 
+{
+    position:fixed;
+    top: 50%;
+    left:90%;
+    background-color: #79218A;
+    opacity: 0.9;
+    padding:5px 10px;
+}
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://www.bctec.org.uk/servonew/</loc>
+  <lastmod>2018-01-16T14:31:56+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://www.bctec.org.uk/servonew/default.aspx</loc>
+  <lastmod>2018-01-16T14:31:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.bctec.org.uk/servonew/content.aspx?name=Products</loc>
+  <lastmod>2018-01-16T14:31:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.bctec.org.uk/servonew/content.aspx?name=MIL-C-5015</loc>
+  <lastmod>2018-01-16T14:31:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.bctec.org.uk/servonew/content.aspx?name=MIL-C-26482</loc>
+  <lastmod>2018-01-16T14:31:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.bctec.org.uk/servonew/content.aspx?name=Customised-Solutions</loc>
+  <lastmod>2018-01-16T14:31:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.bctec.org.uk/servonew/content.aspx?name=Franchises</loc>
+  <lastmod>2018-01-16T14:31:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.bctec.org.uk/servonew/content.aspx?name=Markets</loc>
+  <lastmod>2018-01-16T14:31:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.bctec.org.uk/servonew/content.aspx?name=Approvals</loc>
+  <lastmod>2018-01-16T14:31:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.bctec.org.uk/servonew/contact.aspx</loc>
+  <lastmod>2018-01-16T14:31:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.bctec.org.uk/servonew/RFQ.aspx</loc>
+  <lastmod>2018-01-16T14:31:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
