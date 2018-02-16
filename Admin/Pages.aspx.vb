@@ -22,7 +22,7 @@ Partial Class Pages
             'scheduleDD.DataBind()
         End If
 
-        contentEditor.ShowPreviewMode = False
+        'contentEditor.ShowPreviewMode = False
 
         If Session("Role") = "Approver" Then
             deleteButton.Visible = True
@@ -117,13 +117,13 @@ Partial Class Pages
 
             If page_status.Value = "Awaiting Approval" Then
 
-                contentEditor.Visible = False
+                'contentEditor.Visible = False
 
                 saveButton.Enabled = False
 
             End If
-
-            contentEditor.Text = page_content.Value
+            ContentTA.InnerHtml = page_content.Value
+            'contentEditor.Text = page_content.Value
 
             oCmd.Dispose()
 
@@ -131,7 +131,7 @@ Partial Class Pages
                 publishButton.Enabled = True
                 unpublishButton.Enabled = True
                 revertButton.Enabled = True
-                contentEditor.Visible = True
+                'contentEditor.Visible = True
             Else
                 publishButton.Enabled = False
                 unpublishButton.Enabled = False
@@ -167,7 +167,8 @@ Partial Class Pages
         oCmd.CommandText = "proc_CMS_Save_Content"
         oCmd.CommandType = Data.CommandType.StoredProcedure
         oCmd.Parameters.Add("@page_id", Data.SqlDbType.Int).Value = Request.QueryString("id")
-        oCmd.Parameters.Add("@page_content", Data.SqlDbType.VarChar, -1).Value = contentEditor.Text
+        'CM 16 Feb 2018 - 144595 - User new editor
+        oCmd.Parameters.Add("@page_content", Data.SqlDbType.VarChar, -1).Value = ContentTA.InnerHtml
         oCmd.Parameters.Add("@title", Data.SqlDbType.VarChar, 500).Value = titleTextBox.Text
         oCmd.Parameters.Add("@keywords", Data.SqlDbType.VarChar, 500).Value = keywordsTextBox.Text
         oCmd.Parameters.Add("@page_desc", Data.SqlDbType.VarChar, 500).Value = descTextBox.Text
@@ -194,7 +195,8 @@ Partial Class Pages
         oCmd.CommandText = "proc_CMS_Save_Content_for_Approval"
         oCmd.CommandType = Data.CommandType.StoredProcedure
         oCmd.Parameters.Add("@page_id", Data.SqlDbType.Int).Value = Request.QueryString("id")
-        oCmd.Parameters.Add("@page_content", Data.SqlDbType.VarChar, -1).Value = contentEditor.Text
+        'CM 16 Feb 2018 - 144595 - User new editor
+        oCmd.Parameters.Add("@page_content", Data.SqlDbType.VarChar, -1).Value = ContentTA.InnerHtml
         oCmd.Parameters.Add("@title", Data.SqlDbType.VarChar, 500).Value = titleTextBox.Text
         oCmd.Parameters.Add("@keywords", Data.SqlDbType.VarChar, 500).Value = keywordsTextBox.Text
         oCmd.Parameters.Add("@page_desc", Data.SqlDbType.VarChar, 500).Value = descTextBox.Text
@@ -250,19 +252,19 @@ Partial Class Pages
 
     End Sub
 
-    Protected Sub contentEditor_PostBackCommand(sender As Object, e As System.Web.UI.WebControls.CommandEventArgs) Handles contentEditor.PostBackCommand
+    'Protected Sub contentEditor_PostBackCommand(sender As Object, e As System.Web.UI.WebControls.CommandEventArgs) Handles contentEditor.PostBackCommand
 
-        If e.CommandName = "Save" Then
+    '    If e.CommandName = "Save" Then
 
-            If Session("Role") = "Approver" Then
-                saveContent()
-            Else
-                saveContentForApproval()
-            End If
+    '        If Session("Role") = "Approver" Then
+    '            saveContent()
+    '        Else
+    '            saveContentForApproval()
+    '        End If
 
-        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
     Protected Sub saveButton_Click(sender As Object, e As System.EventArgs) Handles saveButton.Click
 
@@ -281,7 +283,8 @@ Partial Class Pages
         oCmd.CommandText = "proc_CMS_Del_Content"
         oCmd.CommandType = Data.CommandType.StoredProcedure
         oCmd.Parameters.Add("@page_id", Data.SqlDbType.Int).Value = Request.QueryString("id")
-        oCmd.Parameters.Add("@page_content", Data.SqlDbType.VarChar, -1).Value = contentEditor.Text
+        'CM 16 Feb 2018 - 144595 - use new text editor
+        oCmd.Parameters.Add("@page_content", Data.SqlDbType.VarChar, -1).Value = ContentTA.InnerHtml
         oCmd.Parameters.Add("@title", Data.SqlDbType.VarChar, 500).Value = titleTextBox.Text
         oCmd.Parameters.Add("@keywords", Data.SqlDbType.VarChar, 500).Value = keywordsTextBox.Text
         oCmd.Parameters.Add("@page_desc", Data.SqlDbType.VarChar, 500).Value = descTextBox.Text
@@ -366,13 +369,13 @@ Partial Class Pages
 
         If page_status.Value = "Awaiting Approval" Then
 
-            contentEditor.Visible = False
+            ' contentEditor.Visible = False
 
             saveButton.Enabled = False
 
         End If
-
-        contentEditor.Text = page_content.Value
+        'CM 16 Feb 2018 - User new editor
+        ContentTA.InnerHtml = page_content.Value
 
         oCmd2.Dispose()
         oConn2.Close()
@@ -382,7 +385,7 @@ Partial Class Pages
             publishButton.Enabled = True
             unpublishButton.Enabled = True
             revertButton.Enabled = True
-            contentEditor.Visible = True
+            ' contentEditor.Visible = True
         Else
             publishButton.Enabled = False
             unpublishButton.Enabled = False

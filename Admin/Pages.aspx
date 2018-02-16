@@ -6,8 +6,24 @@
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-
+<script src="../tinymce/js/tinymce/tinymce.min.js"></script>
+<script src="../tinymce/js/tinymce/themes/modern/theme.min.js"></script>
 <script type="text/javascript">
+    $(document).ready(function () {
+        tinymce.init({
+            selector: '.tinymce',  // change this value according to your HTML
+            plugins: ['advlist autolink lists link image charmap print preview anchor textcolor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table contextmenu paste code help wordcount table'],
+            a_plugin_option: true,
+            a_configuration_option: 400,
+            menubar: false,
+            toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent table | removeformat | help | pagebreak code preview ',
+            plugin_preview_width: 1000,
+            code_dialog_width: 1000,
+            height: 600
+        });
+    });
 
     function addNew() {
         document.getElementById("newPageDiv").style.display = "block";
@@ -170,11 +186,11 @@
         <asp:Button ID="deleteButton" runat="server" Text="Delete" CssClass="button" OnClientClick="return deleteCheck(this)"/>
     </center>
     <br />
-    <div id="currentContent">
-        <CE:Editor ID="contentEditor" runat="server" Width="89%" Height="500px" BorderStyle="double" BorderWidth="4px" BorderColor="Black" 
-        EditorOnPaste="PasteCleanHTML" ThemeType="Office2007"
-        CleanUpHTMLCode="True" CleanUpMicrosoftWordHTML="True"/>
+    <center>
+    <div id="currentContent" style="display: inline-block; width:85%;">
+        <textarea id="ContentTA" runat="server" class="tinymce" style="width:100%;"/>
     </div>
+    </center>
     
     <div id="newPageDiv" class="newPageDiv">
         <asp:Label ID="newpageLabel" runat="server" Text="New page name"></asp:Label>
