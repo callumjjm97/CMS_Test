@@ -1,0 +1,129 @@
+﻿body
+{
+    margin: 0;
+}
+/*button
+{
+    cursor: pointer;
+    padding: 2px 5px 2px 5px;
+    width: 60px;
+}*/
+
+/*#content {padding:20px}*//* Not sure what this was for? */
+#dialog
+{
+    /* AR 10 Jan 2017 - 123804: Fix modal position */
+    /* AR 23 Jan 2017 - 123804: Fix modal position */
+    position: fixed;
+    top:30% !important;
+    left:35% !important;
+    z-index: 200;
+    background: #fff;
+    margin-left: 0 !important;
+}
+#dialog_header
+{
+    position: relative;
+    padding: 3px 6px 7px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#dialog_title
+{
+    float: left;
+}
+#dialog_close
+{
+    float: right;
+    cursor: pointer;
+    margin: 3px 3px 0 0;
+    height: 11px;
+    width: 11px;
+    background: url(../images/messagebox/dialog_close.gif) no-repeat;
+}
+#dialog_content
+{
+    position: relative;
+    padding: 6px;
+    color: #666666;
+    font-size: 13px;
+}
+#dialog_bar
+{
+    position: relative;
+    padding: 6px;
+    color: #666666;
+    font-size: 13px;
+    text-align: right;
+    margin: 0px 10px 0px 10px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+#dialog_mask
+{
+    /* AR 10 Jan 2017 - 123804: Fix modal position */
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
+    background: #FFF;
+    opacity: .75;
+    filter: alpha(opacity=75);
+    z-index: 100;
+}
+
+.errorbody
+{
+    background: #fff url(../images/messagebox/error_bg.jpg) bottom right no-repeat;
+}
+.warningbody
+{
+    background: #fff url(../images/messagebox/warning_bg.jpg) bottom right no-repeat;
+}
+.successbody
+{
+    background: #fff url(../images/messagebox/success_bg.jpg) bottom right no-repeat;
+}
+.messagebody
+{
+    background: #fff url(../images/messagebox/message_bg.jpg) bottom right no-repeat;
+}
+.errorheader
+{
+    background: url(../images/messagebox/error_header.gif) repeat-x;
+    color: #6f2c2c;
+}
+.warningheader
+{
+    background: url(../images/messagebox/warning_header.gif) repeat-x;
+    color: #957c17;
+}
+.successheader
+{
+    background: url(../images/messagebox/success_header.gif) repeat-x;
+    color: #3c7f51;
+}
+.messageheader
+{
+    background: url(../images/messagebox/message_header.gif) repeat-x;
+    color: #FFFFFF;
+}
+.errorborder
+{
+    border: 1px solid #924949;
+}
+.warningborder
+{
+    border: 1px solid #c5a524;
+}
+.successborder
+{
+    border: 1px solid #60a174;
+}
+.messageborder
+{
+    border: 1px solid #2733DA;
+}

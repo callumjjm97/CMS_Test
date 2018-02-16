@@ -6,20 +6,7 @@
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-  <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-<script type="text/javascript">
-    tinymce.init({
-        selector: ".tinymce",
-        theme: "modern",
-        menubar: false,
-        resize: false,
-        statusbar: false,
-        plugins: ["advlist autolink lists charmap preview hr anchor",
-            "pagebreak code nonbreaking table contextmenu directionality paste"],
-        toolbar1: "styleselect | bold italic underline | pagebreak code preview | undo redo",
-        toolbar2: "alignleft aligncenter alignright alignjustify | bullist numlist outdent indent"
-    });
-</script>
+
 <script type="text/javascript">
 
     function addNew() {
@@ -183,17 +170,12 @@
         <asp:Button ID="deleteButton" runat="server" Text="Delete" CssClass="button" OnClientClick="return deleteCheck(this)"/>
     </center>
     <br />
-    <center>
     <div id="currentContent">
-        <%--<CE:Editor ID="contentEditor" runat="server" Width="89%" Height="500px" BorderStyle="double" BorderWidth="4px" BorderColor="Black" 
+        <CE:Editor ID="contentEditor" runat="server" Width="89%" Height="500px" BorderStyle="double" BorderWidth="4px" BorderColor="Black" 
         EditorOnPaste="PasteCleanHTML" ThemeType="Office2007"
-        CleanUpHTMLCode="True" CleanUpMicrosoftWordHTML="True"/>--%>
-        <div id="content-editor" style="width: 75%; height: 500px; display:inline-block; text-align:center;">
-                <asp:TextBox ID="htmlEditorTxt" runat="server" ClientIDMode="Static"
-        TextMode="MultiLine" Rows="30" style="width:95%" CssClass="tinymce" />
-        </div>
+        CleanUpHTMLCode="True" CleanUpMicrosoftWordHTML="True"/>
     </div>
-    </center>
+    
     <div id="newPageDiv" class="newPageDiv">
         <asp:Label ID="newpageLabel" runat="server" Text="New page name"></asp:Label>
         &nbsp;
@@ -211,7 +193,7 @@
     
     <asp:SqlDataSource ID="sqlstatus" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnectionString %>" SelectCommand="proc_CMS_Get_Page_Status" SelectCommandType="StoredProcedure">
     </asp:SqlDataSource>
-        <asp:SqlDataSource ID="sqlParent" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnectionString %>" SelectCommand="proc_CMS_Get_Page_Names" SelectCommandType="StoredProcedure">
+    <asp:SqlDataSource ID="sqlParent" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnectionString %>" SelectCommand="proc_CMS_Get_Page_Names" SelectCommandType="StoredProcedure">
         <SelectParameters>
             <asp:Parameter Name="page_id" Type="Int32" />
         </SelectParameters>

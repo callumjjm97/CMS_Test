@@ -8,20 +8,22 @@
 <meta name="description" content="Servo Connectors - Based in Lydd, Dover. Leading supplier of connectors across the world.">
 <title>Servo Connectors</title>
 
+<link href="~/Styles/messagebox.css" rel="Stylesheet" type="text/css" />
+<script src="./Scripts/messagebox.js" type="text/javascript"></script>  
 
 <script src="https://code.jquery.com/jquery-3.2.1.js"  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="  crossorigin="anonymous"></script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
-<link rel="stylesheet" type="text/css" href="Styles/Website.css" />
+
+<link rel="stylesheet" type="text/css" href="~/Styles/Website.css" />
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
 <link rel="shortcut icon" href="Images/favicon.ico" />
 
-    <asp:ContentPlaceHolder id="head" runat="server">
-
-    
-
-    </asp:ContentPlaceHolder>   
+<asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>   
 
 </head>
 <body>
@@ -102,18 +104,18 @@
                 <div class="innerScrollArea">
                     <ul>
                         <!-- Define photos here -->
-                        <li><a href="http://www.amerline.com/"><img class="first" src="Images/banner images/Amerline ( 216 px x 106 px).png" height="83px" width="350px" alt="" /></a></li>
-                        <li><a href="https://www.carlisleit.com/Tri-Star"><img src="Images/banner images/Carlisle ( 216 px x 106 px).png" height="83px" width="350px" alt="" /></a></li>
-                        <li><a href="http://commtes.it/"><img src="Images/banner images/CommTes ( 216 px x 106 px).png" height="83px" width="350px" alt="" /></a></li>
-                        <li><a href="http://www.detoronics.com/"><img src="Images/banner images/Detronics( 216 px x 106 px).png" height="83px" width="350px" alt="" /></a></li>
-                        <li><a href="https://www.fujikura.co.uk/"><img src="Images/banner images/Fujikura ( 216 px x 106 px).png" height="83px" width="350px" alt="" /></a></li>
-                        <li><a href="http://www.hellermanntyton.co.uk/"><img src="Images/banner images/HellermanTyton( 216 px x 106 px).png" height="83px" width="350px" alt="" /></a></li>
-                        <li><a href="http://www.kec.co.uk/"><img src="Images/banner images/KEC ( 216 px x 106 px).png" height="83px" width="350px" alt="" /></a></li>
-                        <li><a href="https://www.pflitsch.de/en/"><img src="Images/banner images/Pflitsch ( 216 px x 106 px).png" alt="" height="83px" width="350px" /></a></li>
-                        <li><a href="http://www.kec.co.uk/"><img src="Images/banner images/rsz_bix_old_logo.jpg" alt="" height="83px" width="350px" /></a></li>
-                        <li><a href="http://www.esterline-connection-technologies.com/en-en"><img src="Images/banner images/rsz_souriau_logo_v2.jpg" alt="" height="83px" width="350px" /></a> </li>
-                        <li><a href="http://www.spacecraft.com/"><img src="Images/banner images/Spacecraft ( 216 px x 106 px).png" height="83px" width="350px" alt="" /></a></li>
-                        <li><a href="https://www.yeonhab.com/eng/"><img src="Images/banner images/Yeonhab 216 px x 106 px.png" height="83px" width="350px" alt="" /></a></li>
+                        <li><a href="http://www.amerline.com/"><img class="first" src="./Images/banner images/amerline.png" height="83px" width="350px" alt="" /></a></li>
+                        <li><a href="https://www.carlisleit.com/Tri-Star"><img src="./Images/banner images/carlisle.png" height="83px" width="350px" alt="" /></a></li>
+                        <li><a href="http://commtes.it/"><img src="./Images/banner images/commtes.png" height="83px" width="350px" alt="" /></a></li>
+                        <li><a href="http://www.detoronics.com/"><img src="./Images/banner images/detronics.png" height="83px" width="350px" alt="" /></a></li>
+                        <li><a href="https://www.fujikura.co.uk/"><img src="./Images/banner images/fujikara.png" height="83px" width="350px" alt="" /></a></li>
+                        <li><a href="http://www.hellermanntyton.co.uk/"><img src="./Images/banner images/hellermantyton.png" height="83px" width="350px" alt="" /></a></li>
+                        <li><a href="http://www.kec.co.uk/"><img src="./Images/banner images/kec.png" height="83px" width="350px" alt="" /></a></li>
+                        <li><a href="https://www.pflitsch.de/en/"><img src="./Images/banner images/pfiltsch.png" alt="" height="83px" width="350px" /></a></li>
+                        <li><a href="http://www.kec.co.uk/"><img src="./Images/banner images/bix.jpg" alt="" height="83px" width="350px" /></a></li>
+                        <li><a href="http://www.esterline-connection-technologies.com/en-en"><img src="./Images/banner images/souriau.jpg" alt="" height="83px" width="350px" /></a> </li>
+                        <li><a href="http://www.spacecraft.com/"><img src="./Images/banner images/spacecraft.png" height="83px" width="350px" alt="" /></a></li>
+                        <li><a href="https://www.yeonhab.com/eng/"><img src="./Images/banner images/yeonhab.png" height="83px" width="350px" alt="" /></a></li>
                     </ul>
                 </div>
             </div>
@@ -125,7 +127,7 @@
          <div class="subscribe">
             <asp:Panel id="sbPanel" runat="server" DefaultButton="subscribeBtn">
                 <label><b>Want to stay up to date?</b></label><br />
-                <asp:TextBox ID="subscribeText" CssClass="subscribeText" runat="server" placeholder="Subscribe to our newsletter" ></asp:TextBox>
+                <asp:TextBox ID="subscribeText" CssClass="subscribeText" runat="server" placeholder="Enter your email address to subscribe to our newsletter" ></asp:TextBox>
                 <asp:button ID="subscribeBtn" CssClass="contactBtn" runat="server" text="Subscribe" class="btn btn-default"></asp:button><br />
                 <asp:Label ID="errorLabel" runat="server"></asp:Label>
             </asp:Panel>
@@ -144,7 +146,7 @@
                     <tr>
                         <td style="width:90px"></td>
                         <td>
-                            <a href="http://www.twitter.co.uk"><img src="Images/twitter.png" class="socialicon" alt="Twitter"  /></a>
+                            <a href="https://twitter.com/Servolydd"><img src="Images/twitter.png" class="socialicon" alt="Twitter"  /></a>
                         </td>
                         <td style="width:250px">
                             Servo & Electronic Sales Ltd
@@ -153,7 +155,7 @@
                     <tr>
                         <td style="width:90px"></td>
                         <td>
-                            <a href="http://www.facebook.co.uk"><img src="Images/facebook.png" class="socialicon" alt="Facebook"  /></a>
+                            <a href="https://www.facebook.com/Servo-Electronic-Sales-Ltd-1273537592666467/"><img src="Images/facebook.png" class="socialicon" alt="Facebook"  /></a>
                         </td>
                         <td>
                             Connector House,
@@ -162,7 +164,7 @@
                     <tr>
                         <td style="width:90px"></td>
                         <td>
-                            <a href="http://www.linkedin.co.uk"><img src="Images/linkedin.png" class="socialicon" alt="Linkedin"  /></a>
+                            <a href="https://www.linkedin.com/company/servo-&-electronic-sales-ltd/"><img src="Images/linkedin.png" class="socialicon" alt="Linkedin"  /></a>
                         </td>
                         <td>
                             Harden Road,

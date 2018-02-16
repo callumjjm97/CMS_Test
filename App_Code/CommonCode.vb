@@ -6,6 +6,8 @@ Public Class CommonCode
 
         Message = Replace(Message, Chr(13), " ")
         Message = Replace(Message, Chr(10), " ")
+        Message = Message.Replace("'", "")
+
         Dim cs As ClientScriptManager = Page.ClientScript
         cs.RegisterStartupScript(Me.GetType, "z", "showMsg_Box('" & Message & "', '" & type & "');", True)
 

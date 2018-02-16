@@ -246,13 +246,13 @@
         </asp:FormView>
         <br />
         <asp:Button ID="saveButton" runat="server" Text="Save" CssClass="button" OnClientClick="return checkDetails()" Visible="false"/>
-        <br />
+<%--        <br />
         <br />
         <asp:Label ID="permLabel" runat="server" Text="Page Permissions" Visible="false"></asp:Label>
         <br />
         <br />
         <asp:Panel ID="permPanel" runat="server">
-        </asp:Panel>
+        </asp:Panel>--%>
     </div>
 
     <div id="newUserDiv" class="newPageDiv">

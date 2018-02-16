@@ -73,6 +73,7 @@
                         <asp:MenuItem NavigateUrl="~/Admin/WhatsOn.aspx" Text="News" />               
                         <asp:MenuItem NavigateUrl="~/Admin/Security.aspx" Text="Security" />
                         <asp:MenuItem NavigateUrl="~/Admin/Help.aspx" Text="Help" />
+                        <asp:MenuItem NavigateUrl="~/Admin/NewEditor.aspx" Text="New Editor" />
                     </Items>
                 </asp:Menu>
             </div>
@@ -126,7 +127,7 @@
     <script type="text/javascript">
         treeObj = new JSDragDropTree();
         treeObj.setTreeId('dhtmlgoodies_tree2');
-        treeObj.setMaximumDepth(11);
+        treeObj.setMaximumDepth(20); //4 Tiers
         treeObj.setMessageMaximumDepthReached('Maximum depth reached'); // If you want to show a message when maximum depth is reached, i.e. on drop.
         treeObj.initTree();
         treeObj.expandAll();

@@ -17,7 +17,7 @@
             <br />            
             <asp:TextBox ID="emailTxt" runat="server" Width="350px" placeholder="Email*" CssClass="contactTxt"></asp:TextBox>
             <br />            
-            <asp:TextBox ID="subjectTxt" runat="server" Width="350px" placeholder="Subject*" CssClass="contactTxt"></asp:TextBox>
+            <asp:TextBox ID="subjectTxt" runat="server" Width="350px" placeholder="Subject" CssClass="contactTxt"></asp:TextBox>
             <br />            
             <asp:TextBox ID="messageTxt" runat="server" Width="350px" placeholder="Message*" CssClass="contactTxt" TextMode="MultiLine" Rows="3" ></asp:TextBox>
             <br />

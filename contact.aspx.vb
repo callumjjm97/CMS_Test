@@ -13,14 +13,15 @@ Partial Class contact
             errorString += " Name field cannot be empty."
             isError = 1
         End If
-        'AR 31 Oct 2016 - 199019: Changes to error if email doesn't contain @
-        If emailTxt.Text = "" Or Not emailTxt.Text.Contains("@") Then
+
+        If emailTxt.Text = "" Then
             errorString += " Email field is incorrect."
             isError = 1
-        End If
-        If subjectTxt.Text = "" Then
-            errorString += " Subject field cannot be empty."
-            isError = 1
+        Else
+            If Not Regex.IsMatch(emailTxt.Text, "^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$") Then
+                isError = True
+                errorString += " Email Address is not valid."
+            End If
         End If
         If messageTxt.Text = "" Then
             errorString += " Message field cannot be empty."
@@ -31,7 +32,6 @@ Partial Class contact
             errorLabel.Text = errorString
             errorLabel.ForeColor = Drawing.Color.Red
         Else
-            Dim toAddress As String
             Dim mm As New MailMessage()
 
             Try
@@ -43,7 +43,7 @@ Partial Class contact
                 errorLabel.Text = x.ToString
             End Try
 
-            mm.Subject = subjectTxt.Text
+            mm.Subject = IIf(subjectTxt.Text.Trim = "", "Servo Website Contact Form", subjectTxt.Text)
             mm.IsBodyHtml = True
 
             Dim bodytext As String

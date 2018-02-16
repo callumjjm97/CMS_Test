@@ -8,6 +8,8 @@
                   
         <asp:HiddenField runat="server" ID="PartsHF" />   
 
+    <br />
+
     <div class="RFQPage">           
            
            <div class="RFQHeader">Contact the Office:</div>
@@ -18,15 +20,18 @@
            <div class="RFQHeader">Or fill out our RFQ Form</div>
            <center>
            <div class="RFQUnderHeader">
-               <table>
-                            <tr>                     
-                                <td><asp:TextBox ID="ContactNameText" CssClass="partText" placeholder="Contact Name*" runat="server" Text="" /></td>
-                            </tr>
-                            <tr>                                
-                                <td><asp:TextBox ID="CompanyNameText" CssClass="partText" placeholder="Company Name*" runat="server" Text="" /></td>
-                           </tr>
-                           <tr>                                
-                             <td><asp:DropDownList id="ddlCountry" CssClass="partText" runat="server">                                
+                <table>
+                    <tr>
+                        <td><asp:TextBox ID="nameTxt" CssClass="partText textbox" placeholder="Name *" runat="server" /></td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>
+                        <td><asp:TextBox ID="companyTxt" CssClass="partText textbox" placeholder="Company *" runat="server" /></td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>
+                        <td>
+                            <asp:DropDownList id="countryDD" CssClass="partText dropdown" runat="server">                                
                                 <asp:ListItem Value="AF">Afghanistan</asp:ListItem>
                                 <asp:ListItem Value="AL">Albania</asp:ListItem>
                                 <asp:ListItem Value="DZ">Algeria</asp:ListItem>
@@ -264,33 +269,35 @@
                                 <asp:ListItem Value="ZR">Zaire</asp:ListItem>
                                 <asp:ListItem Value="ZM">Zambia</asp:ListItem>
                                 <asp:ListItem Value="ZW">Zimbabwe</asp:ListItem>
-                                </asp:DropDownList></td>
-                           </tr>
-                           <tr>                                
-                                <td><asp:TextBox ID="PhoneText" CssClass="partText" placeholder="Telephone*" runat="server" Text="" /></td>
-                           </tr>
-                           <tr>                                
-                                <td><asp:TextBox ID="EmailText" CssClass="partText" placeholder="Email*" runat="server" Text="" /></td>
-                           </tr>
-                           <tr>                                
-                                <td><asp:TextBox ID="WebsiteText" CssClass="partText" placeholder="Website" runat="server" Text="" /></td>
-                           </tr>
-                           <tr>                                
-                                <td><asp:TextBox ID="MsgText" CssClass="partText" placeholder="Message*" Height="100px" TextMode="MultiLine" runat="server" Text="" /></td>
-                           </tr>
-                </table>                
-
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>                                
+                        <td><asp:TextBox ID="phoneTxt" CssClass="partText textbox" placeholder="Telephone" runat="server" /></td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>                                
+                        <td><asp:TextBox ID="emailTxt" CssClass="partText textbox" placeholder="Email Address *" runat="server" /></td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>                                
+                        <td><asp:TextBox ID="websiteTxt" CssClass="partText textbox" placeholder="Website" runat="server" /></td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>                                
+                        <td><asp:TextBox ID="messageTxt" CssClass="partText textbox" placeholder="Message *" runat="server" TextMode="MultiLine" Rows="5" /></td>
+                    </tr>
+                    <tr style="height: 25px;"><td>&nbsp;</td></tr>
+                    <tr>                                
+                        <td align="right"><asp:button ID="RFQBtn" CssClass="contactBtn" runat="server" Text="Send RFQ" /></td>
+                    </tr>
+                </table>              
+                <br /><br />
              </div>
-             </center>
-                <div style="clear:both;"></div> 
+        </center>
 
-                <div class="RFQBtnDiv">
-                    <center>
-                        <asp:Label ID="errorLabel" runat="server"></asp:Label>  <br />
-                        <asp:button ID="RFQBtn" CssClass="contactBtn" runat="server" OnClick="sendRFQ" Text="Send RFQ"  />
-                    </center>
-
-                </div>
+        <div style="clear:both;"></div> 
 
      </div>
 </asp:content>

@@ -42,10 +42,10 @@ Partial Class Admin_Security
 
         userFV.DataBind()
 
-        buildPermissions()
+        'buildPermissions()
 
         saveButton.Visible = True
-        permLabel.Visible = True
+        'permLabel.Visible = True
 
     End Sub
 
@@ -53,7 +53,7 @@ Partial Class Admin_Security
 
 
 
-        Dim permtable As Table = permPanel.FindControl("resultstable")
+        'Dim permtable As Table = permPanel.FindControl("resultstable")
 
         'Dim a As Integer = permtable.Rows.Count
 
@@ -89,145 +89,145 @@ Partial Class Admin_Security
             loginid.Value = "6"
             sqluserdetail.SelectParameters("login_id").DefaultValue = 6
 
-            permPanel.Controls.Clear()
+            'permPanel.Controls.Clear()
             permissionsHF.Value = ""
 
             userGV.DataBind()
 
         End If
-        buildPermissions()
+        'buildPermissions()
 
 
     End Sub
 
-    Sub buildPermissions()
+    'Sub buildPermissions()
 
-        Dim tableCount As Integer = 0
+    '    Dim tableCount As Integer = 0
 
-        If Not userFV.FindControl("loginidHF") Is Nothing Then
+    '    If Not userFV.FindControl("loginidHF") Is Nothing Then
 
-            Dim permissionsString As String = ""
+    '        Dim permissionsString As String = ""
 
-            Dim permissionsTable As New DataTable
-            ' Create four typed columns in the DataTable.
-            permissionsTable.Columns.Add("page_Id", GetType(Integer))
-            permissionsTable.Columns.Add("page_name", GetType(String))
-            permissionsTable.Columns.Add("sort_order", GetType(String))
-            permissionsTable.Columns.Add("parent_page", GetType(Integer))
-            permissionsTable.Columns.Add("user_allowed", GetType(Boolean))
+    '        Dim permissionsTable As New DataTable
+    '        ' Create four typed columns in the DataTable.
+    '        permissionsTable.Columns.Add("page_Id", GetType(Integer))
+    '        permissionsTable.Columns.Add("page_name", GetType(String))
+    '        permissionsTable.Columns.Add("sort_order", GetType(String))
+    '        permissionsTable.Columns.Add("parent_page", GetType(Integer))
+    '        permissionsTable.Columns.Add("user_allowed", GetType(Boolean))
 
-            Dim oCmd As New Data.SqlClient.SqlCommand
-            Dim reader As System.Data.SqlClient.SqlDataReader
+    '        Dim oCmd As New Data.SqlClient.SqlCommand
+    '        Dim reader As System.Data.SqlClient.SqlDataReader
 
-            oCmd.Connection = oConn
-            oCmd.CommandText = "proc_CMS_Get_Page_Permissions"
-            oCmd.CommandType = Data.CommandType.StoredProcedure
-            oCmd.Parameters.Add("@login_id", Data.SqlDbType.Int).Value = CType(userFV.FindControl("loginidHF"), HiddenField).Value
-            reader = oCmd.ExecuteReader
-
-
+    '        oCmd.Connection = oConn
+    '        oCmd.CommandText = "proc_CMS_Get_Page_Permissions"
+    '        oCmd.CommandType = Data.CommandType.StoredProcedure
+    '        oCmd.Parameters.Add("@login_id", Data.SqlDbType.Int).Value = CType(userFV.FindControl("loginidHF"), HiddenField).Value
+    '        reader = oCmd.ExecuteReader
 
 
-            While reader.Read
-                permissionsTable.Rows.Add(reader("page_id"), reader("page_name"), reader("sort_order"), reader("parent_page"), reader("user_allowed"))
-
-                If reader("user_allowed") = True Then
-                    permissionsString = permissionsString & "," & reader("page_id")
-                End If
 
 
-            End While
+    '        While reader.Read
+    '            permissionsTable.Rows.Add(reader("page_id"), reader("page_name"), reader("sort_order"), reader("parent_page"), reader("user_allowed"))
 
-            'And Page.FindControl("SubjectsTable") Is Nothing 
+    '            If reader("user_allowed") = True Then
+    '                permissionsString = permissionsString & "," & reader("page_id")
+    '            End If
 
-            reader.Close()
-            oCmd.Dispose()
 
-            permissionsHF.Value = permissionsString
+    '        End While
 
-            permPanel.Controls.Clear()
+    '        'And Page.FindControl("SubjectsTable") Is Nothing 
 
-            Dim resultstable As New Table
+    '        reader.Close()
+    '        oCmd.Dispose()
 
-            resultstable.CellSpacing = 0
-            resultstable.Style("width") = "100%"
-            resultstable.ID = "resultstable"
+    '        permissionsHF.Value = permissionsString
 
-            Dim resultsRow As New TableHeaderRow
+    '        permPanel.Controls.Clear()
 
-            For Each row As DataRow In permissionsTable.Rows
+    '        Dim resultstable As New Table
 
-                Dim resultsCell As New TableCell
-                resultsCell.VerticalAlign = VerticalAlign.Top
+    '        resultstable.CellSpacing = 0
+    '        resultstable.Style("width") = "100%"
+    '        resultstable.ID = "resultstable"
 
-                If row.Item("parent_page") = 0 Then
+    '        Dim resultsRow As New TableHeaderRow
 
-                    Dim permTable As New Table
-                    permTable.ID = row.Item("page_name") & "Table"
-                    permTable.ClientIDMode = UI.ClientIDMode.Static
-                    permTable.CssClass = "permTable"
-                    Dim permRow As New TableRow
-                    Dim permCell As New TableCell
-                    permCell.CssClass = "permissionsParentCell"
+    '        For Each row As DataRow In permissionsTable.Rows
 
-                    Dim cellCheckBox As New CheckBox
-                    cellCheckBox.Text = row.Item("page_name")
-                    cellCheckBox.Checked = row.Item("User_allowed")
-                    cellCheckBox.TextAlign = TextAlign.Right
-                    cellCheckBox.Attributes.Add("onclick", "permissionSave(" & row.Item("page_id") & "); ParentClick(this," & permTable.ClientID & ")")
-                    cellCheckBox.CssClass = "permissionsParent"
+    '            Dim resultsCell As New TableCell
+    '            resultsCell.VerticalAlign = VerticalAlign.Top
 
-                    permCell.Controls.Add(cellCheckBox)
-                    permRow.Controls.Add(permCell)
-                    permTable.Controls.Add(permRow)
+    '            If row.Item("parent_page") = 0 Then
 
-                    For Each parentrow As DataRow In permissionsTable.Rows
+    '                Dim permTable As New Table
+    '                permTable.ID = row.Item("page_name") & "Table"
+    '                permTable.ClientIDMode = UI.ClientIDMode.Static
+    '                permTable.CssClass = "permTable"
+    '                Dim permRow As New TableRow
+    '                Dim permCell As New TableCell
+    '                permCell.CssClass = "permissionsParentCell"
 
-                        If parentrow.Item("parent_page") = row.Item("page_Id") Then
+    '                Dim cellCheckBox As New CheckBox
+    '                cellCheckBox.Text = row.Item("page_name")
+    '                cellCheckBox.Checked = row.Item("User_allowed")
+    '                cellCheckBox.TextAlign = TextAlign.Right
+    '                cellCheckBox.Attributes.Add("onclick", "permissionSave(" & row.Item("page_id") & "); ParentClick(this," & permTable.ClientID & ")")
+    '                cellCheckBox.CssClass = "permissionsParent"
 
-                            Dim parentpermRow As New TableRow
-                            Dim parentpermCell As New TableCell
-                            parentpermCell.CssClass = "permissionsChildCell"
+    '                permCell.Controls.Add(cellCheckBox)
+    '                permRow.Controls.Add(permCell)
+    '                permTable.Controls.Add(permRow)
 
-                            Dim parentcellCheckBox As New CheckBox
-                            parentcellCheckBox.Text = parentrow.Item("page_name")
-                            parentcellCheckBox.Checked = parentrow.Item("User_allowed")
-                            parentcellCheckBox.TextAlign = TextAlign.Right
-                            parentcellCheckBox.Attributes.Add("onclick", "permissionSave(" & parentrow.Item("page_id") & ")")
-                            parentcellCheckBox.CssClass = "permissionsChild"
+    '                For Each parentrow As DataRow In permissionsTable.Rows
 
-                            parentpermCell.Controls.Add(parentcellCheckBox)
-                            parentpermRow.Controls.Add(parentpermCell)
-                            permTable.Controls.Add(parentpermRow)
+    '                    If parentrow.Item("parent_page") = row.Item("page_Id") Then
 
-                        End If
-                    Next
+    '                        Dim parentpermRow As New TableRow
+    '                        Dim parentpermCell As New TableCell
+    '                        parentpermCell.CssClass = "permissionsChildCell"
 
-                    resultsCell.Controls.Add(permTable)
+    '                        Dim parentcellCheckBox As New CheckBox
+    '                        parentcellCheckBox.Text = parentrow.Item("page_name")
+    '                        parentcellCheckBox.Checked = parentrow.Item("User_allowed")
+    '                        parentcellCheckBox.TextAlign = TextAlign.Right
+    '                        parentcellCheckBox.Attributes.Add("onclick", "permissionSave(" & parentrow.Item("page_id") & ")")
+    '                        parentcellCheckBox.CssClass = "permissionsChild"
 
-                    tableCount = tableCount + 1
-                End If
+    '                        parentpermCell.Controls.Add(parentcellCheckBox)
+    '                        parentpermRow.Controls.Add(parentpermCell)
+    '                        permTable.Controls.Add(parentpermRow)
 
-                If resultsCell.Controls.Count > 0 Then
-                    resultsRow.Controls.Add(resultsCell)
-                End If
+    '                    End If
+    '                Next
 
-                If tableCount = 5 Then
-                    tableCount = 0
-                    resultstable.Controls.Add(resultsRow)
-                    resultsRow = New TableHeaderRow
-                End If
-            Next
+    '                resultsCell.Controls.Add(permTable)
 
-            If tableCount < 5 Then
-                resultstable.Controls.Add(resultsRow)
-            End If
+    '                tableCount = tableCount + 1
+    '            End If
 
-            permPanel.Controls.Add(resultstable)
+    '            If resultsCell.Controls.Count > 0 Then
+    '                resultsRow.Controls.Add(resultsCell)
+    '            End If
 
-        End If
+    '            If tableCount = 5 Then
+    '                tableCount = 0
+    '                resultstable.Controls.Add(resultsRow)
+    '                resultsRow = New TableHeaderRow
+    '            End If
+    '        Next
 
-    End Sub
+    '        If tableCount < 5 Then
+    '            resultstable.Controls.Add(resultsRow)
+    '        End If
+
+    '        permPanel.Controls.Add(resultstable)
+
+    '    End If
+
+    'End Sub
 
     Protected Sub saveNewButton_Click(sender As Object, e As System.EventArgs) Handles saveNewButton.Click
 
@@ -256,10 +256,10 @@ Partial Class Admin_Security
             userGV.DataBind()
             userFV.DataBind()
 
-            buildPermissions()
+            'buildPermissions()
 
             saveButton.Visible = True
-            permLabel.Visible = True
+            'permLabel.Visible = True
         Else
             Dim message As String = "Please correct any errors for the passwords and make sure they match."
             Dim sb As New System.Text.StringBuilder()
